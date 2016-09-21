@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "my personal website",
+  "main": "server.js",
+  "scripts": {
+    "build-css": "node-sass src/scss/ -o public/css",
+    "watch-css": "npm run build-css & node-sass src/scss/ -wo public/css",
+    "clean": "rmdir public\\css /s /q & mkdir public\\css",
+    "build": "npm run clean & npm run build-css",
+    "watch": "parallelshell \"npm run clean\" \"npm run watch-css\" \"nodemon server -e js,jade\"",
+    "start": "nodemon server -e js,jade"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "node-sass": "^3.10.0",
+    "nodemon": "^1.9.2"
+  },
+  "devDependencies": {
+    "parallelshell": "^2.0.0"
+  }
+}
