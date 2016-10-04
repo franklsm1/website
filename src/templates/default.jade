@@ -1,20 +1,22 @@
 doctype html
 html
-  head
-    link(rel='stylesheet', href='/css/main.css')
-    title Sean Franklin's Webpage
-  body
-    .header
-      h1.page-title Sean Franklin
+    head
+        link(rel='stylesheet', href='/css/main.css')
+        title Sean Franklin's Webpage
+    body
+        .header
+            h1.page-title Sean Franklin
 
-    ul.nav
-      li: a(href='/') Home
-      li: a(href='#blog') Blog
-      li: a(href='#resume') Resume
-      li: a(href='#contact') Random
-    
-    .main-content
-      block content
+        ul.nav
+            li: a(href='/') Home
+            li: a(href='https://developer.ibm.com/bluemix/author/smfrank/') Blog Posts
+            li: a(href='/resume') Resume
 
-    .footer
-      p Need to add a cool footer text
+        .main-content
+            block content
+
+        .resume-content
+            block resume
+
+        .footer
+            p The best way to predict the future is to create it. -Peter Drucker

@@ -55,6 +55,16 @@ body {
   }
 }
 
+.resume-content {
+  text-align:center;
+  width:100%;
+
+  iframe {
+    width: 800px;
+    height: 600px;
+  }
+}
+
 .footer {
   margin: 50px auto;
   max-width: 600px;

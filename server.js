@@ -3,14 +3,24 @@
 var express = require('express'),
     logger = require('morgan'),
     app = express(),
-    template = require('jade').compileFile(__dirname + '/src/templates/homepage.jade');
+    homeTemplate = require('jade').compileFile(__dirname + '/src/templates/homepage.jade'),
+    resumeTemplate = require('jade').compileFile(__dirname + '/src/templates/resume.jade');
 
 app.use(logger('dev'));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res, next) {
     try {
-        var html = template({title: 'Home'});
+        var html = homeTemplate({title: 'Home'});
+        res.send(html);
+    } catch (e) {
+        next(e);
+    }
+});
+
+app.get('/resume', function (req, res, next) {
+    try {
+        var html = resumeTemplate({title: 'Resume'});
         res.send(html);
     } catch (e) {
         next(e);

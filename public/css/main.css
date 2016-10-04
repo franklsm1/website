@@ -39,6 +39,13 @@ body {
     line-height: 1.6;
     margin-bottom: 1.7em; }
 
+.resume-content {
+  text-align: center;
+  width: 100%; }
+  .resume-content iframe {
+    width: 800px;
+    height: 600px; }
+
 .footer {
   margin: 50px auto;
   max-width: 600px;
