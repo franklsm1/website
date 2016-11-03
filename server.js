@@ -8,6 +8,7 @@ var express = require('express'),
 
 app.use(logger('dev'));
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/images'));
 
 app.get('/', function (req, res, next) {
     try {
